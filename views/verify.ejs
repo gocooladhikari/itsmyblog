@@ -1,0 +1,17 @@
+<form method="POST" action="/user/<%= slug %>/verify" class=" mt-5">
+    <p>Paste the code sent to your gmail account</p>
+    <div class="control-group ">
+      <div class="form-group floating-label-form-group controls">
+        <label>Code</label>
+        <input type="text" class="form-control" name="code" placeholder="Verification Code" id="code" required >
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+    </div>
+  </form>
+

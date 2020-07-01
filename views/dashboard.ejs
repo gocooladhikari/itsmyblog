@@ -1,0 +1,46 @@
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h2><%= user.name %></h2>
+            <span class="subheading">Welcome to your Dashboard.</span>
+            <span class="subheading">You can manage your posts from here.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+        <% posts.forEach(post=>{ %>
+        <div class="post-preview">
+          <a href="/<%= user.slug %>/post/<%= post.slug %>">
+            <h2 class="post-title">
+              <%= post.title %>
+            </h2>
+            <h3 class="post-subtitle">
+              <%= post.description %>
+            </h3>
+          </a>
+          <p class="post-meta">Posted 
+            <!-- <a href="/user/<%= post.userslug %>/profile"><%= post.poweruser %></a> -->
+            on <%= post.createdAt.toLocaleDateString() %></p>
+        </div>
+        <a href="#" class="btn btn-primary">Edit</a>
+        <a href="#" class="btn btn-danger">Delete</a>
+        <hr>
+        <% }) %>
+        <hr>
+        <!-- Pager -->
+        <!-- <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div> -->
+      </div>
+    </div>
+  </div>

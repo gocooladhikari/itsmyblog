@@ -1,0 +1,16 @@
+<form method="POST" action="/user/<%= slug %>/register" enctype="multipart/form-data" class=" mt-5">
+    <p>Upload a Profile picturet</p>
+    <div class="control-group ">
+      <div class="form-group floating-label-form-group controls">
+        <label>Profile Image</label>
+        <input type="file" class="form-control" name="image" placeholder="Image" id="code" >
+        <p class="help-block text-danger"></p>
+      </div>
+    </div>
+    
+    <br>
+    <div id="success"></div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
+    </div>
+  </form>
